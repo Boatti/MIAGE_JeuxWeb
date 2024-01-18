@@ -143,6 +143,18 @@ Smartphone
 PC gaming
 
 
+Liste des scénarios : 
+
+Augmenter / baisser / couper le son
+Si l’utilisateur souhaite modifier l’intensité du volume, il aura besoin de cliquer sur l'icône du menu déroulant en haut à droite de notre site (action qui sera normalement intuitive grâce au design épuré de notre site) fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff todo
+Voir le classement / les statistiques
+Si l’utilisateur souhaite accéder aux classements pour se comparer avec les autres joueurs et se créer une compétition ou aux stats des différents jeu afin d’avoir un aperçu global sur les performances et adapter son gameplay en fonction, il aura tout simplement besoin d'accéder au menu déroulant, puis de cliquer sur “Statistics”, il devra ensuite sélectionner le jeu et il pourra accéder à une page avec toutes les informations recherchées
+Revenir sur la page d'accueil
+Il y a trois moyens de faire cette fonctionnalité : soit cliquer sur le fil d’ariane sur “Game Page”, cliquer sur le logo “PlayZone” ou enfin dans le menu déroulant.
+Se déconnecter de son compte
+Si l’utilisateur souhaite se déconnecter, il devra accéder au menu déroulant, puis sur l'icône “profile” puis il pourra se déconnecter depuis la page de connexion.
+
+
 
 
 Lien Figma : https://www.figma.com/file/f1t3uMbjuRkja9nSWo32NE/Interface-Site?type=design&node-id=26%3A8&mode=design&t=Yn34nHWcPfLY27RP-1
