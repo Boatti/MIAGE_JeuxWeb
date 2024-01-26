@@ -1,0 +1,12 @@
+#menuSetting {
+    width: 100px;
+}
+
+#globalDivSetting {
+    margin-top: 5vw;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

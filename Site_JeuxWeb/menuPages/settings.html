@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayZone</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/setting.css">
+    <link rel="icon" type="image/x-icon" href="../img/icon/logoPZ.ico">
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+
+    <div id="globalDiv">
+        <div id="titleWebsite2">
+            <a href="../gameHub.html">
+                <div>PlayZone</div>
+            </a>
+            <div id="divMenu">
+                <img id="menu" onclick="openMenu()" src="../img/icon/menu.png" alt="">
+
+                <div id="hiddenMenu">
+                    <a href="../gameHub.html">
+                    <div class="menuSectionTop">
+                        <img class="imgMenuIcon" src="../img/icon/homeIcon.png" alt="">
+                        <div>Home Page</div>
+                    </div>
+                </a>
+                    <a href="../menuPages/profile.html">
+                    <div class="menuSection">
+                        <img class="imgMenuIcon" src="../img/icon/profileIcon.png" alt="">
+                        <div>Profile</div>
+                    </div>
+                    <a href="../menuPages/statistics.html">
+                    <div class="menuSection">
+                        <img class="imgMenuIcon" src="../img/icon/statisticsIcon.png" alt="">
+                        <div>Statistics</div>
+
+                    </div>
+                    <a href="../menuPages/achievements.html">
+                        <div class="menuSection">
+                            <img class="imgMenuIcon" src="../img/icon/achievementsIcon.png" alt="">
+                            <div>Achievements</div>
+                        </div>
+                    </a>
+                    <a href="../menuPages/settings.html">
+                        <div class="menuSectionBottom">
+                            <img class="imgMenuIcon" src="../img/icon/settingsIcon.png" alt="">
+                            <div>Settings</div>
+                        </div>
+                    </a>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div id="globalDivSetting">
+            <div><div>Language : </div> 
+            <div>
+                <select id="menuSetting" name="menuSetting">
+                <option value="option1">English</option>
+                <option value="option2">French</option>
+                <option value="option3">Arabic</option>
+              </select></div></div>
+            <div><div>Dark mode : </div> <div><input type="checkbox"></div></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

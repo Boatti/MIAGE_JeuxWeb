@@ -1,0 +1,106 @@
+#globalDivAchiev {
+    padding-bottom: 5vw;
+    font-family: "RobotoRegular";
+    position: relative;
+    margin-top: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#globalDivAchievSon {
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+
+.gameAndAchiev {
+    boder: 2px solid red;
+    display: flex; 
+    gap: 100px;
+}
+
+#dinoRunner {
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/games/dino.png");
+    background-size: cover;
+}
+
+#ticTacToe {
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/games/tictac.png");
+    background-size: cover;
+}
+
+#blackJack {
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/games/blackjack.png");
+    background-size: cover;
+}
+
+#betGame {
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/games/betGame.jpg");
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.dinoRunnerParent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.achievList {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    justify-content: center;
+}
+
+.greenBox {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(27, 137, 27);
+    border-radius: 10px;
+}
+
+.greyBox {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(164, 164, 164);
+    border-radius: 10px;
+}
+
+.listBox {
+    gap: 50px;
+    align-items: center;
+    boder: 2px solid red;
+    display: flex;
+}
+
+.bigText {
+    font-size: 1.7rem;
+}
+
+.textParent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.littleText {
+    font-size: 1rem;
+}
+
+.gameTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
