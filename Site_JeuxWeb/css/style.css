@@ -115,7 +115,7 @@ body {
     position: relative;
     flex: 0.1;
     font-size: 3rem;
-    margin-top: 40px;
+    margin-top: 4vw;
     font-family: "IrishGrover"; 
     display: flex;
     justify-content: center;
@@ -128,7 +128,7 @@ body {
 
 #allGamesContent {
     margin-top: 15vw;
-    gap: 140px;
+    gap: 10vw;
     flex: 0.9;
     display: flex;
     flex-direction: column;
@@ -249,9 +249,10 @@ body {
 
 .spanGamePitch {
     width: 300px;
+    font-size: 0.9em;
     text-align: center;
     position: absolute;
-    bottom: -115px;
+    bottom: -7vw;
     left: 50%;
     transform: translateX(-50%);
 }
