@@ -192,9 +192,10 @@ body {
 }
 
 #game1{
-    background:url("../img/games/dino.png");
-    background-size:contain;
+    background:url("../img/games/squidRunner.png");
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: -30px;
 }
 #game2{
     background:url("../img/games/tictac.png");
@@ -269,6 +270,7 @@ body {
 }
 
 .menuSectionBottom {
+    background-color: white;
     gap: 5px;
     display: flex;
     justify-content: center;
