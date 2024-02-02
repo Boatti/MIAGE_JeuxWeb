@@ -7,3 +7,4 @@ function openMenu() {
         hiddenDiv.style.height = '0px';
     }
 }
+

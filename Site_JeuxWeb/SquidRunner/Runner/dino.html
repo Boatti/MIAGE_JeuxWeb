@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" , content="width=device-width, initial-scale=1.0">
+    <title>PlayZone</title>
+    <link rel="stylesheet" href="dino.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script src="dino.js"></script>
+</head>
+
+<body>
+    <div id="body_container">
+        <div id="container">
+            <div id="divMenu">
+                <img id="menu" onclick="openMenu()" src="../img/icon/menu.png" alt="">
+
+                <div id="hiddenMenu">
+                    <a href="../menuPages/gameHub.html"></a>
+                    <div class="menuSectionTop">
+                        <img class="imgMenuIcon" src="../img/icon/homeIcon.png" alt="">
+                        <div>Home Page</div>
+                    </div>
+                    <a href="../menuPages/profile.html">
+                        <div class="menuSection">
+                            <img class="imgMenuIcon" src="../img/icon/profileIcon.png" alt="">
+                            <div>Profile</div>
+                        </div>
+                        <a href="../menuPages/statistics.html">
+                            <div class="menuSection">
+                                <img class="imgMenuIcon" src="../img/icon/statisticsIcon.png" alt="">
+                                <div>Statistics</div>
+
+                            </div>
+                            <a href="../menuPages/achievements.html">
+                                <div class="menuSection">
+                                    <img class="imgMenuIcon" src="../img/icon/achievementsIcon.png" alt="">
+                                    <div>Achievements</div>
+                                </div>
+                            </a>
+                            <a href="../menuPages/settings.html">
+                                <div class="menuSectionBottom">
+                                    <img class="imgMenuIcon" src="../img/icon/settingsIcon.png" alt="">
+                                    <div>Settings</div>
+
+                                </div>
+                            </a>
+
+                </div>
+            </div>
+        </div>
+        <h1>PlayZone</h1>
+        <canvas id="board"></canvas>
+        <button id="replayButton" type="button">Rejouer</button>
+        <button id="difficultyButton" type="button">Easy</button>
+    </div>
+    </div>
+</body>
+
+</html>
