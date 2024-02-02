@@ -258,6 +258,7 @@ body {
 }
 
 .menuSection {
+    background-color: white;
     gap: 5px;
     display: flex;
     justify-content: center;
@@ -287,6 +288,7 @@ body {
 }
 
 .menuSectionTop {
+    background-color: white;
     gap: 5px;
     display: flex;
     justify-content: center;
