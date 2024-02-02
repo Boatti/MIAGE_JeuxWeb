@@ -241,8 +241,15 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     font-family: "RobotoRegular";
+    
+}
+
+.titlePlusDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
-    bottom: -35px;
+    bottom: -100px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -251,10 +258,6 @@ body {
     width: 300px;
     font-size: 0.9em;
     text-align: center;
-    position: absolute;
-    bottom: -7vw;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .menuSection {
