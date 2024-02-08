@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" , content="width=device-width, initial-scale=1.0">
     <title>PlayZone</title>
     <link rel="stylesheet" href="dino.css">
     <link rel="stylesheet" href="../css/style.css">
-
     <script src="dino.js"></script>
 </head>
-
 <body>
     <div id="body_container">
         <div id="container">
             <div id="divMenu">
                 <img id="menu" onclick="openMenu()" src="../img/icon/menu.png" alt="">
-
                 <div id="hiddenMenu">
                     <a href="../menuPages/gameHub.html"></a>
                     <div class="menuSectionTop">
@@ -44,17 +40,18 @@
                                 <div class="menuSectionBottom">
                                     <img class="imgMenuIcon" src="../img/icon/settingsIcon.png" alt="">
                                     <div>Settings</div>
-
                                 </div>
                             </a>
-
-                </div>
+            </div>
+            </div>
+             <div id="middle">
+                <canvas id="board"></can>
+            </div>
+            <div id="info">
+                <button id="replayButton" type="button">Rejouer</but>
+                <button id="difficultyButton" type="button">Easy</button>
             </div>
         </div>
-        <h1>PlayZone</h1>
-        <canvas id="board"></canvas>
-        <button id="replayButton" type="button">Rejouer</button>
-        <button id="difficultyButton" type="button">Easy</button>
     </div>
     </div>
 </body>
