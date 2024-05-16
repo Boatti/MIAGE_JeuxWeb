@@ -14,25 +14,26 @@ export class VerifyBet {
           return response.json();
       })
       .then(data => { 
-        if (this.typeBet === 'combined-bet'){
-        for (let bet in bets){
-          if ( bet !== 'amountBet'){
-            let result = data.filter((item) => item.Id === bet)[0]
-            let forlevel = this.verifyBetCombined(result.Victoire, bet,  bets);         
-            if (forlevel){
-              this.level += 1;
-            }
-            else {
-              this.level = 0;
-              break;
+          for (let bet in bets){
+            if ( bet !== 'amountBet'){
+              let result = data.filter((item) => item.Id === bet)[0]
+              let forlevel = this.verifyBetCombined(result.Victoire, bet,  bets);         
+              if (!forlevel){
+                this.level = 0;
+                document.getElementById('level').innerHTML = `Niveau : ${this.level}`;
+
+              }  
+              else {
+                this.level += 1;
+                document.getElementById('level').innerHTML = `Niveau : ${this.level}`;
+              }
             }
           }
-      }}})
+        })
       .catch(error => console.error('Erreur :', error));
     }
 
     verifyBetCombined(result, bet, bets){
-      console.log('okok')
       let changeBet = document.getElementById(`${bet}_bet`);
       if(result === bets[bet].teamSelected){
         changeBet.style.backgroundColor = 'green';
@@ -40,7 +41,7 @@ export class VerifyBet {
       }
       else{
         changeBet.style.backgroundColor = 'red';
-        return false; 
+        return false
       }
     }
 }
