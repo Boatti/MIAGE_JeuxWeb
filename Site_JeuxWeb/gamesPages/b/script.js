@@ -1,5 +1,3 @@
-/* This BlackJack Game is based on "JavaScript Blackjack game by Chris Clower" */
-
 (function () {
 
 /*****************************************************************/
@@ -12,6 +10,7 @@
 			running   = false,
 			blackjack = false,
 			insured   = 0,
+			level = 0
 			deal;
 
 /*****************************************************************/
@@ -592,17 +591,22 @@
 				player.setBank(winnings - wager);
 				$('#alert').removeClass('alert-info alert-error').addClass('alert-success');
 				result = 'Blackjack!';
+				level +=1
 			} else if(pscore <= 21) {
 				winnings = wager * 2;
 				player.setCash(winnings);
 				player.setBank(winnings - wager);
 				$('#alert').removeClass('alert-info alert-error').addClass('alert-success');
 				result = 'You win!';
+				level = 0 
 			} else if(pscore > 21) {
 				winnings -= wager;
 				player.setBank(winnings);
 				$('#alert').removeClass('alert-info alert-success').addClass('alert-error');
 				result = 'Bust';
+				level = 0 
+				$('#level').html(`Niveau : ${level}`);
+
 			}
 		} else if(pscore < dscore) {
 			if(pscore <= 21 && dscore > 21) {
@@ -611,11 +615,17 @@
 				player.setBank(winnings - wager);
 				$('#alert').removeClass('alert-info alert-error').addClass('alert-success');
 				result = 'You win - dealer bust!';
+				level += 1
+				$('#level').html(`Niveau : ${level}`);
+				
 			} else if(dscore <= 21) {
 				winnings -= wager;
 				player.setBank(winnings);
 				$('#alert').removeClass('alert-info alert-success').addClass('alert-error');
 				result = 'You lose!';
+				level = 0 
+				$('#level').html(`Niveau : ${level}`);
+
 			}
 		} else if(pscore === dscore) {
 			if(pscore <= 21) {
@@ -624,17 +634,28 @@
 					player.setBank(winnings);
 					$('#alert').removeClass('alert-info alert-success').addClass('alert-error');
 					result = 'You lose - dealer Blackjack!';
+					level = 0 
+					$('#level').html(`Niveau : ${level}`);
+
+
 				} else {
 					winnings = wager;
 					$('#alert').removeClass('alert-error alert-success').addClass('alert-info');
 					player.setCash(winnings);
 					result = 'Push';
+					level = 0 
+					$('#level').html(`Niveau : ${level}`);
+
+					
 				}
 			} else {
 				winnings -= wager;
 				player.setBank(winnings);
 				$('#alert').removeClass('alert-info alert-success').addClass('alert-error');
 				result = 'Bust';
+					level = 0 
+					$('#level').html(`Niveau : ${level}`);
+
 			}
 		}
 

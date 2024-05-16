@@ -13,7 +13,7 @@ export class DisplayBet {
             // Définit la couleur de tous les éléments en transparent au début
             if (this.typeBet !== betType.classList[0]){
               betTypes.forEach(type => {
-                  type.style.backgroundColor = 'transparent'; // Assurez-vous que le fond est réinitialisé
+                  type.style.backgroundColor = 'transparent';
               });
               this.typeBet = betType.classList[0];
               betType.style.backgroundColor = 'red'
