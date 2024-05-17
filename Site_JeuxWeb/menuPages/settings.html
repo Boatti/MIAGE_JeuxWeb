@@ -67,7 +67,23 @@
               </select></div></div>
             <div><div>Dark mode : </div> <div><input type="checkbox"></div></div>
         </div>
+
+        <div class="sound-bar-container">
+            <span class="volume-label">Volume:</span>
+            <input type="range" min="0" max="100" value="50" class="slider" id="volumeRange">
+        </div>
     </div>
+
+
+
+    <script>
+        const volumeRange = document.getElementById('volumeRange');
+
+        volumeRange.addEventListener('input', function() {
+            console.log('Volume:', volumeRange.value);
+            
+        });
+    </script>
 
 </body>
 
