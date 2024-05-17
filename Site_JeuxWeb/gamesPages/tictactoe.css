@@ -12,10 +12,29 @@ body {
     overflow: hidden; /* Pour éviter les débordements */
 }
 
+#middle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center ;
+}
 
 #renderCanvas {
+    flex: 0.7;
+    width: 100%; height: 110%;
     border-bottom: 1px solid black;
     margin-left: 13vw;
+}
+
+#gamesselector{
+    flex: 0.3;
+    /* height: 100%;
+    width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 #body_container{
@@ -56,24 +75,6 @@ button:hover{
     background-color: #f2f2f2;
 }
 
-
-#middle{
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center ;
-}
-#gamesselector{
-
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
 .games {
     width: 5vw;
     height: 5vw;
