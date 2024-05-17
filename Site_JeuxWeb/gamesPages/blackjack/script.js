@@ -120,13 +120,12 @@
 					});
 				}
 			}
-
 			return deck;
 		};
 	}
 
 	function Shuffle(deck) {
-		var set      = deck.getDeck(),
+		var set  = deck.getDeck(),
 				shuffled = [],
 				card;
 
@@ -170,7 +169,6 @@
 			} else {
 				value = parseInt(rank, 0);
 			}
-
 			return value;
 		};
 	}
@@ -319,7 +317,6 @@
 
 	Player.prototype.dbl = function() {
 		var wager = this.getWager();
-
 		if(this.checkWager(wager * 2)) {
 			$('#double').prop('disabled', true);
 			this.setWager(wager);
@@ -592,19 +589,28 @@
 				$('#alert').removeClass('alert-info alert-error').addClass('alert-success');
 				result = 'Blackjack!';
 				level +=1
+				$('#level').html(`Niveau : ${level}`);
+
 			} else if(pscore <= 21) {
 				winnings = wager * 2;
 				player.setCash(winnings);
 				player.setBank(winnings - wager);
 				$('#alert').removeClass('alert-info alert-error').addClass('alert-success');
 				result = 'You win!';
-				level = 0 
+				level += 1 
+				$('#level').html(`Niveau : ${level}`);
+
 			} else if(pscore > 21) {
 				winnings -= wager;
 				player.setBank(winnings);
 				$('#alert').removeClass('alert-info alert-success').addClass('alert-error');
 				result = 'Bust';
-				level = 0 
+				if (level === 0){
+					level = 0
+				} 
+				else {
+					level -= 1
+				}
 				$('#level').html(`Niveau : ${level}`);
 
 			}
@@ -623,7 +629,12 @@
 				player.setBank(winnings);
 				$('#alert').removeClass('alert-info alert-success').addClass('alert-error');
 				result = 'You lose!';
-				level = 0 
+				if (level === 0){
+					level = 0
+				} 
+				else {
+					level -= 1
+				} 
 				$('#level').html(`Niveau : ${level}`);
 
 			}
@@ -634,7 +645,12 @@
 					player.setBank(winnings);
 					$('#alert').removeClass('alert-info alert-success').addClass('alert-error');
 					result = 'You lose - dealer Blackjack!';
-					level = 0 
+					if (level === 0){
+						level = 0
+					} 
+					else {
+						level -= 1
+					}
 					$('#level').html(`Niveau : ${level}`);
 
 
@@ -643,7 +659,6 @@
 					$('#alert').removeClass('alert-error alert-success').addClass('alert-info');
 					player.setCash(winnings);
 					result = 'Push';
-					level = 0 
 					$('#level').html(`Niveau : ${level}`);
 
 					
@@ -653,8 +668,13 @@
 				player.setBank(winnings);
 				$('#alert').removeClass('alert-info alert-success').addClass('alert-error');
 				result = 'Bust';
-					level = 0 
-					$('#level').html(`Niveau : ${level}`);
+				if (level === 0){
+					level = 0
+				} 
+				else {
+					level -= 1
+				}
+				$('#level').html(`Niveau : ${level}`);
 
 			}
 		}
