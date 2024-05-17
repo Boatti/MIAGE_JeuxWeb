@@ -1,51 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe</title>
-    <script src="https://cdn.babylonjs.com/babylon.js"></script>
-</head>
-<body>
-    <canvas id="renderCanvas"></canvas>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var canvas = document.getElementById("renderCanvas");
-            var engine = new BABYLON.Engine(canvas, true);
-
-            var createScene = function () {
-                var scene = new BABYLON.Scene(engine);
-
-                // Créer une caméra ArcRotateCamera
-                var camera = new BABYLON.ArcRotateCamera("camera", Math.PI / 2, Math.PI / 2, 2, BABYLON.Vector3.Zero(), scene);
-                camera.attachControl(canvas, true);
-
-                // Créer un sol
-                var ground = BABYLON.Mesh.CreateGround("ground", 10, 10, 2, scene);
-
-                // Créer une sphère
-                var sphere = BABYLON.Mesh.CreateSphere("sphere", 16, 2, scene);
-                sphere.position.y = 1; // Déplacer la sphère vers le haut
-
-                // Ajouter une lumière
-                var light = new BABYLON.PointLight("light", new BABYLON.Vector3(0, 5, 0), scene);
-
-                return scene;
-            };
-
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="tictactoe.css">
+        <script src="https://preview.babylonjs.com/babylon.js"></script>
+            <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+            <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
+            <script src="game.js"></script>
+            <script src="../js/script.js"></script>
+    </head>
+    <body>
+        <div id="body_container">
+            <div id="container">
+                <div id="titleWebsite2">
+                    <a href="../../gameHub.html">
+                        <div>PlayZone</div>
+                    </a>
+                <div id="divMenu">
+                    <img id="menu" onclick="openMenu()" src="../img/icon/menu.png" alt="">
+                    <div id="hiddenMenu">
+                        <a href="../../menuPages/gameHub.html"></a>
+                        <div class="menuSectionTop">
+                            <img class="imgMenuIcon" src="../img/icon/homeIcon.png" alt="">
+                            <div>Home Page</div>
+                        </div>
+                        <a href="../../menuPages/profile.html">
+                            <div class="menuSection">
+                                <img class="imgMenuIcon" src="../img/icon/profileIcon.png" alt="">
+                                <div>Profile</div>
+                            </div>
+                            <a href="../../menuPages/statistics.html">
+                                <div class="menuSection">
+                                    <img class="imgMenuIcon" src="../img/icon/statisticsIcon.png" alt="">
+                                    <div>Statistics</div>
+    
+                                </div>
+                                <a href="../../menuPages/achievements.html">
+                                    <div class="menuSection">
+                                        <img class="imgMenuIcon" src="../img/icon/achievementsIcon.png" alt="">
+                                        <div>Achievements</div>
+                                    </div>
+                                </a>
+                                <a href="../../menuPages/settings.html">
+                                    <div class="menuSectionBottom">
+                                        <img class="imgMenuIcon" src="../img/icon/settingsIcon.png" alt="">
+                                        <div>Settings</div>
+                                    </div>
+                                </a>
+                            </div>
+                    </div>
+                </div>
+                 <div id="middle">
+                    <canvas id="renderCanvas"></canvas>  
+                    <div id="gamesselector">
+                        <a href="../../gamesPages/ticTacToe.html"><div class="games" id="game1"></div></a>
+                        <div class="games" id="game2"></div>
+                        <div class="games" id="game3"></div>
+                    </div>
+                </div>
+                <div id="info">
+                    <a href="tictactoe2.html"><button id="replayButton" type="button">FullScreen</button></a>
+                    <button id="difficultyButton" type="button">Easy</button>
+                </div>
                 
-
-            var scene = createScene();
-
-            engine.runRenderLoop(function () {
-                scene.render();
-            });
-
-            window.addEventListener("resize", function () {
-                engine.resize();
-            });
-        });
-    </script>
-</body>
+            </div>
+        </div>
+        </div>
+    </body>   
 </html>
+
+
+
+
+
+
+
+
+
