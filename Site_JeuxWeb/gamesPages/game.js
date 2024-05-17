@@ -120,8 +120,8 @@ window.addEventListener('DOMContentLoaded', function(){
         rect2.color = "red";
         rect2.thickness = 1.5;
         rect2.background = "white";
-        rect2.top = "372px";
-        rect2.left = "700px";
+        rect2.top = "272px";
+        rect2.left = "600px";
         dynamicTexture.addControl(rect2); // Ajouter le rectangle à la texture dynamique
 
         // Mettre un fond de couleur pour le score
@@ -132,8 +132,8 @@ window.addEventListener('DOMContentLoaded', function(){
         rect3.color = "blue";
         rect3.thickness = 1.5;
         rect3.background = "white";
-        rect3.top = "429px";
-        rect3.left = "700px";
+        rect3.top = "329px";
+        rect3.left = "600px";
         dynamicTexture.addControl(rect3); // Ajouter le rectangle à la texture dynamique
 
         // Ajouter un texte pour le score
@@ -142,8 +142,8 @@ window.addEventListener('DOMContentLoaded', function(){
         textBlockScore.color = "black";
         textBlockScore.fontSize = 24;
         textBlockScore.fontWeight = "bold";
-        textBlockScore.top = "400px";
-        textBlockScore.left = "700px";
+        textBlockScore.top = "300px";
+        textBlockScore.left = "600px";
         dynamicTexture.addControl(textBlockScore); // Ajouter le bloc de texte à la texture dynamique
 
         // Mettre une fond de couleur pour le bloc de texte
@@ -154,7 +154,7 @@ window.addEventListener('DOMContentLoaded', function(){
         rect.color = "black";
         rect.thickness = 1.5;
         rect.background = "white";
-        rect.top = "401px";
+        rect.top = "301px";
         rect.left = "0px";
         dynamicTexture.addControl(rect); // Ajouter le rectangle à la texture dynamique
 
@@ -164,7 +164,7 @@ window.addEventListener('DOMContentLoaded', function(){
         textBlock.color = currentPlayer == 1 ? "red" : "blue";
         textBlock.fontSize = 24;
         textBlock.fontWeight = "bold";
-        textBlock.top = "400px";
+        textBlock.top = "300px";
         textBlock.left = "0px";
         dynamicTexture.addControl(textBlock); // Ajouter le bloc de texte à la texture dynamique
 
